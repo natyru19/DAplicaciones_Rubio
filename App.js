@@ -5,6 +5,8 @@ import ModalDelete from "./src/components/ModalDelete"
 import AddProduct from "./src/components/AddProduct"
 import ListProduct from "./src/components/ListProduct"
 import Home from "./src/Screens/Home"
+import ItemListCategories from "./src/Screens/ItemListCategories"
+import ItemDetail from "./src/Screens/ItemDetail"
 
 
 const App = () => {
@@ -36,26 +38,10 @@ const App = () => {
     setModalVisible(false)
   }
 
-    return  <View style={styles.container}>
-      <Home/>
-              <AddProduct
-              valueTitle={newTitleProduct}
-              valuePrice={newPriceProduct}
-              onChangeTitle={setNewTitleProduct}
-              onChangePrice={setNewPriceProduct}
-              addProduct={handlerAddProduct}
-              />
+    return  <View style={styles.container}> 
+    <ItemListCategories/>    
+      
               
-              <ListProduct
-              products={products}
-              onModal={handlerModal}
-              />
-              <ModalDelete
-              product={productSelected}
-              visible={modalVisible}
-              onModal={handlerModal}
-              onDelete={handlerDeleteProduct}
-              />
            </View>
     
   }

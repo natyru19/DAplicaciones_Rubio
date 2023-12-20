@@ -10,6 +10,7 @@ const Home = () => {
       <Header title="Categorías"/>
       <Categories/>
       
+      
     </>
   )
 }
